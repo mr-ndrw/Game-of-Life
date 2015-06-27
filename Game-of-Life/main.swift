@@ -8,5 +8,16 @@
 
 import Foundation
 
-println("Hello, World!")
+var life = Life(numberOfRows: 10, numberOfColumns: 10)
+life.evolveAndPrint()
+life.markBoard(0, column: 1)
+life.markBoard(1, column: 2)
+life.markBoard(2, column: 0)
+life.markBoard(2, column: 1)
+life.markBoard(2, column: 2)
+
+for i in 0..<50 {
+    life.evolveAndPrint(andSleepFor: 1)
+}
+//println("Hello, World!")
 
